@@ -1,0 +1,200 @@
+<base target="_blank">
+<body>
+    <div class="profile">
+      <div class="profile-header">
+        <!-- <img src="banner.png" id="card-banner"> -->
+      </div>
+      <div class="profile-content">
+        <img class="profile-pp" src="profile.png" width="100%">
+        <div class="profile-status-dnd"></div>
+        <div class="profile-badges">
+          <img class="profile-badge" src="Brilliance.png">
+          <img class="profile-badge" src="nitro.png">
+          <img class="profile-badge" src="boost-badge.png">
+        </div>
+        <div class="profile-user-info">
+          <h4 class="profile-username">ayd1ndemirci</h4>
+          <p class="profile-user-status">Frontend günlüğü - Gün 7</p>
+          <h4 class="profile-aboutme">hakkımda</h4>
+          <p class="profile-content">
+               Web Developer,
+               DiscordJS Developer
+            <a href="https://github.com/ayd1ndemirci">https://github.com/ayd1ndemirci</a><br>
+          </p>
+          <h4 class="profile-joined">ŞU TARİHTEN BERİ DİSCORD ÜYESİ:</h4>
+          <p class="profile-joined-date">
+             24 Mayıs 2019
+          </p>
+          <h4 class="profile-note">not</h4>
+          <textarea placeholder="Not eklemek için tıkla" class="profile-note-content" type="text" onkeypress="this.value = this.value.substring(0,256);"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+<style>
+    *,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --ui-bg: #202225;
+  --ui-profile-bg: #292b2f;
+  --ui-profile-head: #000;
+  --ui-profile-fore: #18191c;
+  --ui-profile-shadow: rgba(0, 0, 0, 0.1);
+  --ui-profile-status-dnd: #ed4245;
+}
+
+body {
+  background: var(--ui-bg);
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe Ui Variable", sans-serif;
+}
+
+.profile {
+  box-shadow: 0 0 20px var(--ui-profile-shadow);
+  background: var(--ui-profile-bg);
+  border-radius: 10px;
+  min-height: 400px;
+  min-width: 300px;
+  margin: 8% auto;
+  height: 450px;
+  width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-header {
+  background: var(--ui-profile-head);
+  border-radius: 10px 10px 0 0;
+  height: 65px;
+  width: 100%;
+}
+
+.profile-content {
+  position: relative;
+}
+
+.profile-pp {
+  border: 6px solid var(--ui-profile-bg);
+  border-radius: 50%;
+  margin: -45px 20px;
+  width: 100px;
+  height: 100px;
+  z-index: -9;
+  float: left;
+}
+
+.profile-status-dnd {
+  background: var(--ui-profile-status-dnd);
+  border: 6px solid var(--ui-profile-bg);
+  border-radius: 50%;
+  margin: 20px -53px;
+  height: 30px;
+  width: 30px;
+  z-index: 99;
+  float: left;
+}
+
+.profile-status-dnd:before {
+  content: " ";
+  width: 14px;
+  height: 4px;
+  margin: 6.5px 2px;
+  position: absolute;
+  border-bottom-color: var(--ui-profile-bg);
+  border-bottom-width: 0.3em;
+  border-bottom-style: solid;
+  border-radius: 4px;
+}
+
+.profile-badges {
+  display: flex;
+  margin: 20px;
+  float: right;
+  background: var(--ui-profile-fore);
+  border-radius: 7px;
+  padding: 7px;
+}
+
+.profile-badge {
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+}
+
+.profile-user-info {
+  position: absolute;
+  margin: 65px 20px;
+  background: var(--ui-profile-fore);
+  padding: 10px 15px;
+  width: 310px;
+  border-radius: 7px;
+  height: 300px;
+}
+
+.profile-username {
+  font-weight: 700;
+  font-size: 21px;
+  color: #fff;
+  margin: 0;
+}
+
+.profile-aboutme,
+.profile-joined,
+.profile-note {
+  margin: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 13px;
+}
+
+.profile-content p,
+.profile-joined-date p {
+  margin: 10px 0;
+  color: #d3d4d5;
+  font-size: 14px;
+  word-wrap: break-word;
+  max-height: 100px;
+}
+
+.profile-content a,
+.profile-joined-date a {
+  color: #00a8ec;
+  text-decoration: none;
+}
+
+.profile-content a:hover,
+.profile-joined-date a:hover {
+  text-decoration: underline;
+}
+
+.profile-note-content {
+  font-family: "Segoe UI Variable", sans-serif;
+  background: transparent;
+  word-wrap: break-word;
+  margin: 7px 5px;
+  color: #d3d4d5;
+  font-size: 13px;
+  height: 70px;
+  width: 270px;
+  max-height: 70px;
+  max-width: 270px;
+  resize: none;
+  border: 0;
+  outline: 0;
+}
+
+.profile-note-content::-webkit-scrollbar {
+  opacity: 0;
+}
+
+</style>
